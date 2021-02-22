@@ -475,7 +475,7 @@ h1{
   }
   .navbar-toggler .navbar-toggler-icon{
     position: absolute;  
-    left: 29rem;
+    left: 25rem;
     top: 7px;
   }
    #nav .nav-item {
