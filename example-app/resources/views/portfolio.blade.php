@@ -822,5 +822,15 @@ h1{
       </form>
     </div>
       </footer>
+      <script>
+      function Alert() {
+    window.alert("Hired!");
+    var person = window.prompt("Please enter your name: ");
+    if (person != null) {
+        window.alert("Hello " + person + "." + " How are you?");
+    }else{
+        window.alert("User cancelled!");
+    }
+}</script>
 </body>
 </html>
