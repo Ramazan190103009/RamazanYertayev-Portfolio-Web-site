@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\DB;
 
+use App\Models\Post;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,4 +26,16 @@ Route::get('/portfolio', function () {
 
 Route::get('/user', function () {
     return view('user');
+});
+
+Route::get('post/create', function(){
+    DB::table('post')->insert([
+        'tittle' => 'Math Programming',
+        'body' => 'Math Programming is a blog about what no good programmer can do without - about mathematics. Articles detail the methods of machine learning, quantum computing, algorithmic theory, procedural graphics generation, and more. Any note that describes an algorithm also contains its implementation in Python - it may come in handy.'
+    ]);
+});
+
+Route::get('post', function(){
+   $posts=Post::find(1);
+   return $posts->body;
 });
