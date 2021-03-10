@@ -136,6 +136,9 @@ p{
     width: 400px;
     height: 300px;
 }
+#header-img:hover{
+    opacity: 0.7;
+}
 .div1{
     width: 100%;
     height: 550px;
@@ -436,6 +439,7 @@ h1{
     top: 150px;
     width: 120px;
 }
+
 @media screen and (max-width:500px){
     body {
         width: 500px;
@@ -669,7 +673,7 @@ h1{
         </div>
         <h1 id="h1">Hello</h1>
        <p id="whoiam">I am Ramazan</p>
-       <button class="btn btn-danger btn-lg btn1" id="btn1" onclick="Alert()">Hire Me!</button>
+       <button class="btn btn-danger btn-lg btn1" id="btn1" data-toggle="tooltip" title="Hire me!" onclick="Alert()">Hire Me!</button>
        <div class="group">  
        <p class="p1">Front-end developer</p>
         <hr class="hr">
@@ -831,6 +835,10 @@ h1{
     }else{
         window.alert("User cancelled!");
     }
-}</script>
+}
+    $(document).ready(function(){
+       $('[data-toogle="tooltip"').tooltip();
+   });
+</script>
 </body>
 </html>
