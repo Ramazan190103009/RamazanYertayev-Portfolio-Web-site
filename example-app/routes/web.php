@@ -41,3 +41,6 @@ Route::get('post2/create', function(){
 });
 
 Route::post('post2/create', [BlogController::class, 'store'])->name('add-post');
+
+//TEST ROUTE
+Route::get('post/{id}', [BlogController::class, 'get_id']);
