@@ -21,7 +21,7 @@ class BlogController extends Controller
     public function get_id($id){
       $post = Post::find($id);
       if ($post == null) {
-          return response(404);
+          return response([404], 404);
       }   
       return view('blog.show_post_get_id')->with(['post' => $post]);
     }
