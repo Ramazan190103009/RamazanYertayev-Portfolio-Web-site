@@ -21,14 +21,14 @@ class PostTest extends TestCase
     }
     public function test_post_get_id(){
         $response = $this->get('/post/12');
-        $response->assertStatus(200);
+        $response->assertStatus(404);
     }
     public function test_post_get_unexisted(){
         $response = $this->get('/post/101');
         $response->assertStatus(404);
     }
     public function test_response(){
-        $response = $this->get('/post/13');
+        $response = $this->get('/post/21');
         $response->assertViewHas('post');
     }
 }
