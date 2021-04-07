@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\UploadController;
 use App\Models\Post;
 
 /*
@@ -44,3 +45,7 @@ Route::post('post2/create', [BlogController::class, 'store'])->name('add-post');
 
 //TEST ROUTE
 Route::get('post/{id}', [BlogController::class, 'get_id']);
+
+//UPLOAD FILE ROUTE
+Route::get('upload_form', [UploadController::class, 'show']);
+Route::post('upload_form', [UploadController::class, 'upload'])->name('upload');
