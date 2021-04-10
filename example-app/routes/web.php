@@ -49,3 +49,6 @@ Route::post('upload_form', [UploadController::class, 'upload'])->name('upload');
 
 Route::get('upl', [UploadController::class, 'index']);
 Route::post('upload', [UploadController::class, 'upload2'])->name('upload_db');
+
+//Mail routes
+Route::get('send_mail', [MailController::class, 'sendEmail']);
