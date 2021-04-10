@@ -46,3 +46,6 @@ Route::get('post/{id}', [BlogController::class, 'get_id']);
 //UPLOAD FILE ROUTE
 Route::get('upload_form', [UploadController::class, 'show']);
 Route::post('upload_form', [UploadController::class, 'upload'])->name('upload');
+
+Route::get('upl', [UploadController::class, 'index']);
+Route::post('upload', [UploadController::class, 'upload2'])->name('upload_db');
