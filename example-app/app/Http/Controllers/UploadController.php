@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Auth\Events\Validated;
 use Illuminate\Http\Request;
 
 class UploadController extends Controller

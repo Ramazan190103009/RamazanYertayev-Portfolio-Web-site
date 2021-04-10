@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\MailController;
 use App\Http\Controllers\UploadController;
 use App\Models\Post;
 
@@ -24,10 +25,6 @@ Route::get('/', function () {
 Route::get('/portfolio', function () {
     return view('portfolio');
 })->name('portfolio');
-
-Route::get('/user', function () {
-    return view('user');
-});
 
 Route::get('post/create', function(){
     DB::table('post')->insert([
