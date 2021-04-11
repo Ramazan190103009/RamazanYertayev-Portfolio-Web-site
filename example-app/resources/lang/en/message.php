@@ -40,5 +40,8 @@
   "subject*"=>"Subject*",
   "message*"=>"Message*",
   "send"=>"Send",
-  "language" => "English"];
+  "home" => "HOME",
+  "about"=>"ABOUT",
+  "service"=>"SERVICE",
+  "contact"=>"CONTACT"];
 ?>

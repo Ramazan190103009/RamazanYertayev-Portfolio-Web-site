@@ -4,12 +4,14 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ContactForm;
+use App\Http\Controllers\LanguageController;
 use App\Http\Controllers\localization_controller;
 use App\Http\Controllers\MailController;
 use App\Http\Controllers\UploadController;
 use App\Http\Middleware\Localization;
 use App\Models\Post;
 use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Redirect;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,7 +27,6 @@ use Illuminate\Support\Facades\App;
 Route::get('/', function () {
     return view('welcome');
 });
-
 Route::get('/portfolio', function () {
     return view('portfolio');
 })->name('portfolio');
@@ -61,6 +62,11 @@ Route::get('send_mail', [MailController::class, 'sendEmail']);
 Route::get('/portfolio/{locale}', function($locale){
   App::setLocale($locale);
   return view('portfolio');
+});
+//localization with switches
+Route::get('lang/{lang}', function($locale){
+    session()->put('locale', $locale);
+    return Redirect()->back();
 });
 
 Route::get('/contact-us', [ContactForm::class, 'contact']);

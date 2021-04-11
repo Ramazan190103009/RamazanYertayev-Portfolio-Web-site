@@ -659,11 +659,20 @@ h1{
      </button>
 <div class="collapse navbar-collapse" id="collapsibleNavbar">
             <div class="navbar-nav ml-auto">
-              <a class="nav-item nav-link" href="#" id="home">Home </a>
-              <a class="nav-item nav-link" href="#about">About Me</a>
-              <a class="nav-item nav-link" href="#services">Services</a>
-              <a class="nav-item nav-link" href="#contact">Contact</a>
+              <a class="nav-item nav-link" href="#" id="home">{{__('message.home')}}</a>
+              <a class="nav-item nav-link" href="#about">{{__('message.about')}}</a>
+              <a class="nav-item nav-link" href="#services">{{__('message.service')}}</a>
+              <a class="nav-item nav-link" href="#contact">{{__('message.contact')}}</a>
             </div>
+            <div class="dropdown">
+  <a class="btn btn-success dropdown-toggle" type="button" data-toggle="dropdown">Lang
+  </a>
+  <ul class="dropdown-menu" id="list">
+    <li><a href="lang/en">EN</a></li>
+    <li><a href="lang/ru">RU</a></li>
+    <li><a href="lang/kz">KZ</a></li>
+  </ul>
+</div>
           </div>
         </nav>
     <section class="row">

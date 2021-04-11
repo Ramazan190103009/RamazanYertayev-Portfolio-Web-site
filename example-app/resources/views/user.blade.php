@@ -7,6 +7,11 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Hello! MY NAME IS RAMAZAN AND I AM STUDYING IN SULEIMAN DEMIREL UNIVERSITY</h1>
+    <h1>{{__('message.language')}}</h1>
+    <div>
+     <a href="lang/en">EN</a>
+     <a href="lang/ru">RU</a>
+     <a href="lang/kz">KZ</a>
+    </div>
 </body>
 </html>
