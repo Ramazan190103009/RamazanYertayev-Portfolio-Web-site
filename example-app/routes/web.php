@@ -3,8 +3,11 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\ContactForm;
+use App\Http\Controllers\localization_controller;
 use App\Http\Controllers\MailController;
 use App\Http\Controllers\UploadController;
+use App\Http\Middleware\Localization;
 use App\Models\Post;
 use Illuminate\Support\Facades\App;
 
@@ -55,7 +58,10 @@ Route::post('upload', [UploadController::class, 'upload2'])->name('upload_db');
 Route::get('send_mail', [MailController::class, 'sendEmail']);
 
 //Localization
-Route::get('/{locale}', function($locale){
+Route::get('/portfolio/{locale}', function($locale){
   App::setLocale($locale);
   return view('portfolio');
 });
+
+Route::get('/contact-us', [ContactForm::class, 'contact']);
+Route::post('/send-message', [ContactForm::class, 'sendEmail'])->name('sent-email');
