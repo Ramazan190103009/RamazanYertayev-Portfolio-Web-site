@@ -6,6 +6,7 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\MailController;
 use App\Http\Controllers\UploadController;
 use App\Models\Post;
+use Illuminate\Support\Facades\App;
 
 /*
 |--------------------------------------------------------------------------
@@ -52,3 +53,9 @@ Route::post('upload', [UploadController::class, 'upload2'])->name('upload_db');
 
 //Mail routes
 Route::get('send_mail', [MailController::class, 'sendEmail']);
+
+//Localization
+Route::get('/{locale}', function($locale){
+  App::setLocale($locale);
+  return view('portfolio');
+});

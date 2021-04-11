@@ -9,7 +9,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <title>Portfolio</title>
+    <title>{{__('message.PORTFOLIO')}}</title>
 </head>
 <body>
     <style>
@@ -119,7 +119,7 @@ p{
     color: rgb(255, 255, 255);
     width: 40%;
     font-weight: 500;
-    font-size: 6rem;
+    font-size: 4.5rem;
 }
 #whoiam{
     position: absolute;
@@ -127,7 +127,7 @@ p{
     top: 280px;
     color: rgb(255, 255, 255);
     width: 35%;
-    font-size: 25px;
+    font-size: 20px;
 }
 #header-img{
     position: relative;
@@ -244,7 +244,7 @@ h5{
     position: absolute;
     left: 65%;
     top: 51.9rem;
-    width: 20%;
+    width: 25%;
 }
 .block2{
     width:79.9rem;
@@ -376,7 +376,7 @@ h1{
     top: 20px;
     font-weight: bold;
     font-size: 20px;
-    width: 0%;
+    width: 30%;
 }
 .place{
     position: absolute;
@@ -653,7 +653,7 @@ h1{
     </style>
         <nav class="navbar navbar-expand-sm text-uppercase fixed-top  bg-dark" id="nav">
      <img src="{{asset('images/icon.png')}}" alt="icon" id="icon">  
-     <a href="#" class="navbar-brand">Portfolio</a>      
+     <a href="#" class="navbar-brand">{{ __('message.PORTFOLIO')}}</a>      
      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
        <span class="navbar-toggler-icon"><img src="{{asset('images/b-menu.png')}}" alt="burger-menu"></span>
      </button>
@@ -671,25 +671,24 @@ h1{
         <div class="div1">
         <img class="rounded" src="{{asset('images/photo.jpg')}}" class="h-img" id="header-img">
         </div>
-        <h1 id="h1">Hello</h1>
-       <p id="whoiam">I am Ramazan</p>
-       <button class="btn btn-danger btn-lg btn1" id="btn1" data-toggle="tooltip" title="Hire me!" onclick="Alert()">Hire Me!</button>
+        <h1 id="h1">{{__('message.Hello')}}</h1>
+       <p id="whoiam">{{__('message.I am Ramazan')}}</p>
+       <button class="btn btn-danger btn-lg btn1" id="btn1" data-toggle="tooltip" title="Hire me!" onclick="Alert()">{{__('message.Hire me!')}}</button>
        <div class="group">  
-       <p class="p1">Front-end developer</p>
+       <p class="p1">{{__('message.Front-end developer')}}</p>
         <hr class="hr">
-        <p class="p2">Graphical Designer</p>
+        <p class="p2">{{__('message.Graphical Designer')}}</p>
        </div>
      <div class="social"><a href="#" class="fa fa-facebook"></a>
       <a href="#" class="fa fa-twitter"></a>
       <a href="#" class="fa fa-instagram"></a></div>
     <!--About me-->
      <div class="aboutme">
-         <h1 class="h1-about" id="about">About Me</h1>
+         <h1 class="h1-about" id="about">{{__('message.About me')}}</h1>
          <hr class="solid">
          <hr class="solid1">
-         <p class="col-sm-7 p3">I'm Ramazan and <b>Web Developer</b></p>
-         <p class="col-sm-11 des1">Hi! My name is Yertayev Ramazan. I am a Web Developer, and I'm very passionate and dedicated to my work. With 0 years experience as a professional<br>
-           Web developer, I have acquired the skills and knowledge necessary to make your project a success. I enjoy every step of the design process,<br> from discussion and collaboration.</p> 
+         <p class="col-sm-7 p3"><b>{{__('message.whoiam')}}</b></p>
+         <p class="col-sm-11 des1">{{__('message.des')}}</p> 
           </div>
       <div class="block1">
          <div class="progress-header">
@@ -717,44 +716,44 @@ h1{
           </div></div>
          <ul class="list-group list-group1">
            <li class="list-group-item list-group-item-dark ">
-             <h4>Name:</h4>
-             Yertayev Ramazan
+             <h4>{{__('message.name')}}:</h4>
+             {{__('message.user')}}
            </li>
            <li class="list-group-item list-group-item-dark">
-            <h4>Birthday:</h4>
-            03 December 2002
+            <h4>{{__('message.birthday')}}:</h4>
+            {{__('message.date')}}
           </li>
           <li class="list-group-item list-group-item-dark">
-            <h4>Website:</h4>
+            <h4>{{__('message.website')}}:</h4>
             www.domain.com
           </li>
           <li class="list-group-item list-group-item-dark">
-            <h4>City:</h4>
-            Nur-Sultan
+            <h4>{{__('message.city')}}:</h4>
+            {{__('message.name-city')}}
           </li>
          </ul>
          <!---list-group-2-->
          <ul class="list-group list-group2">
           <li class="list-group-item list-group-item-dark ">
-            <h4>Tel:</h4>
+            <h4>{{__('message.tel')}}:</h4>
              +7 777 777 77 77
           </li>
           <li class="list-group-item list-group-item-dark">
-           <h4>Email:</h4>
+           <h4>{{__('message.email')}}:</h4>
             190103009@gmail.com
          </li>
          <li class="list-group-item list-group-item-dark">
-           <h4>Age:</h4>
+           <h4>{{__('message.age')}}:</h4>
            18
          </li>
          <li class="list-group-item list-group-item-dark">
-           <h4>University:</h4>
-           SDU
+           <h4>{{__('message.University')}}:</h4>
+           {{__('message.name-univer')}}
          </li>
         </ul>
       </div>
     <div class="block2">
-          <h1 class="header-service" id="services">Services</h1>
+          <h1 class="header-service" id="services">{{__('message.services')}}</h1>
          <div class="solid2"></div> 
          <div class="solid3"></div>
          <!--Web-design-->
@@ -762,8 +761,8 @@ h1{
           <div class="column column1">
             <div class="card">
               <i class="material-icons" style="position: relative;left: 180px;font-size: 40px; color: red;">computer</i>
-              <h3>Web Design</h3>
-              <p class="p4" style="color: black;">Lorem Ipsum is simply dummy <br>text of the printing and typesetting industry Lorem Ipsum.</p>
+              <h3>{{__('message.webdesigner')}}</h3>
+              <p class="p4" style="color: black;">{{__('message.text')}}</p>
             </div>
           </div>
          </div>
@@ -773,8 +772,8 @@ h1{
           <div class="column column2">
             <div class="card">
               <i class="material-icons" style="position: relative;left: 180px; font-size: 40px; color: red;">photographer</i>
-              <h3>Photography</h3>
-              <p class="p4" style="color: black;">Lorem Ipsum is simply dummy<br>text of the printing and typesetting industry Lorem<br> Ipsum.</p>
+              <h3>{{__('message.photographer')}}</h3>
+              <p class="p4" style="color: black;">{{__('message.text')}}</p>
             </div>
           </div>
           </div>
@@ -784,8 +783,8 @@ h1{
           <div class="column column3">
             <div class="card">
               <i class='material-icons' style='position: relative;left: 180px;font-size:40px;color:red'>border_colors</i>
-              <h3>Logo design</h3>
-              <p class="p4" style="color: black;">Lorem Ipsum is simply dummy<br>text of the printing and typesetting industry Lorem<br> Ipsum.</p>
+              <h3>{{__('message.logodesigner')}}</h3>
+              <p class="p4" style="color: black;">{{__('message.text')}}</p>
             </div>
           </div>
           </div>
@@ -794,8 +793,8 @@ h1{
             <div class="column column4">
               <div class="card">
                 <i class='material-icons' style='position: relative;left: 180px;font-size:40px;color:red'>videocam</i>
-                <h3>Video Editor</h3>
-                <p class="p4" style="color: black;">Lorem Ipsum is simply dummy<br>text of the printing and typesetting industry Lorem<br> Ipsum.</p>
+                <h3>{{__('message.video editor')}}</h3>
+                <p class="p4" style="color: black;">{{__('message.text')}}</p>
               </div>
             </div>  
           </div>
@@ -803,26 +802,26 @@ h1{
     </section>
     <footer>
       <div class="footer" id="contact">
-       <h1 class="contact-header" id="contactme">Contact Me</h1>
+       <h1 class="contact-header" id="contactme">{{__('message.contactme')}}</h1>
        <div class="solid5"></div> 
        <div class="solid6"></div>
        <br>
        <i class="material-icons call" style="font-size: 45px; color: red;">call</i>
-       <p class="number">&nbsp;&nbsp;Call me on <br>+7 777 77 77</p>
+       <p class="number">&nbsp;&nbsp;{{__('message.callmeon')}} <br>+7 777 77 77</p>
 
        <i class="material-icons email" style="font-size: 45px; color: red;">email</i>
-       <p class="email-index">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Email:<br>190103009@stu.sdu.edu.kz</p>
+       <p class="email-index">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{__('message.EMAIL')}}:<br>190103009@stu.sdu.edu.kz</p>
 
        
        <i class="material-icons place" style="font-size: 45px; color: red;">place</i>
-       <p class="place-info">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Location:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Almaty, BlaBlaBla</p></p>
+       <p class="place-info">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{__('message.location')}}:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{__('message.text2')}}</p></p>
 
        <form method="GET" id="form">
-         <input class="form-control" type="text" name="fname" id="name" placeholder="Name*" required>
-         <input class="form-control email" type="text" name="email" id="email" placeholder="Email*" required>
-         <input class="form-control" type="text" name="subject" placeholder="Subject*" id="subject" required>
-         <textarea class="form-control " name="textarea" id="textarea"  rows="5" placeholder="Message*"></textarea>
-        <input class="btn btn-dark btn-lg" type="submit" value="Send" id="submit">
+         <input class="form-control" type="text" name="fname" id="name" placeholder="{{__('message.name*')}}" required>
+         <input class="form-control email" type="text" name="email" id="email" placeholder="{{__('message.email*')}}" required>
+         <input class="form-control" type="text" name="subject" placeholder="{{__('message.subject*')}}" id="subject" required>
+         <textarea class="form-control " name="textarea" id="textarea"  rows="5" placeholder="{{__('message.message*')}}"></textarea>
+        <input class="btn btn-dark btn-lg" type="submit" value="{{__('message.send')}}" id="submit">
       </form>
     </div>
       </footer>
